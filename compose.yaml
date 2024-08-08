@@ -1,0 +1,16 @@
+services:
+  m:
+    image: m/toolbox:1.0
+    init: true
+    environment:
+      - M_TOOLBOX_DOCKER=true
+      - TERM  
+    volumes: 
+      - ./config/.git-prompt.sh:/root/.git-prompt.sh
+      - ./config:/root/.config
+      - ./config/.bashrc:/root/.bashrc
+      - ./config/.tmux.conf:/root/.tmux.conf
+      - ./data:/data
+    build: 
+      dockerfile: ./src/Dockerfile
+    command: [ "/bin/sleep", "infinity"]
