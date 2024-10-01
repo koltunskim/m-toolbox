@@ -3,7 +3,7 @@ return { {
 	config = function()
 		require("mason").setup {}
 		require("mason-lspconfig").setup {
-			ensure_installed = { "lua_ls", "pyright", "ruff_lsp", "rust_analyzer", "bashls" },
+			ensure_installed = { "lua_ls", "pyright", "ruff_lsp", "rust_analyzer", "bashls", "terraformls" },
 		}
 		require("mason-lspconfig").setup_handlers {
 			-- The first entry (without a key) will be the default handler
