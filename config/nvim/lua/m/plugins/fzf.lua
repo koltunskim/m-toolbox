@@ -3,10 +3,6 @@ return {
 	{
 		"junegunn/fzf.vim",
 		config = function()
-			vim.api.nvim_set_keymap("n", "<leader>f", "<cmd>Files<CR>", { noremap = true })
-			vim.api.nvim_set_keymap("n", "<leader>bs", "<cmd>Buffers<CR>", { noremap = true })
-			vim.api.nvim_set_keymap("n", "<leader>rr", "<cmd>Rg><CR>", { noremap = true })
-			vim.api.nvim_set_keymap("n", "<leader>rg", "<cmd>RG><CR>", { noremap = true })
 		end
 	},
 	{
