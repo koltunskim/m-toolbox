@@ -1,6 +1,8 @@
 vim.api.nvim_set_keymap("n", "<leader>bn", "<cmd>bnext<CR>", { noremap = true })
 vim.api.nvim_set_keymap("n", "<leader>bp", "<cmd>bprevious<CR>", { noremap = true })
 vim.api.nvim_set_keymap("n", "<leader>bs", "<cmd>Buffers<CR>", { noremap = true })
+vim.api.nvim_set_keymap('n', '<leader>vcp', ':lua CopyFilePath()<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<leader>vcd', ':lua CopyDirPath()<CR>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "<leader>f", "<cmd>Files<CR>", { noremap = true })
 vim.api.nvim_set_keymap("n", "<leader>rg", "<cmd>Rg<CR>", { noremap = true })
 vim.api.nvim_set_keymap("n", "<leader>td", "<cmd>ToggleDiagnostics<CR>", { noremap = true, silent = true })

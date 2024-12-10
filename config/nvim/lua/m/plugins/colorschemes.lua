@@ -1,9 +1,9 @@
 return {
+	{ "catppuccin/nvim",         name = "catppuccin", priority = 1000 },
 	{
 		"rebelot/kanagawa.nvim",
 		config = function()
 			print("Configuring Kanagawa colorscheme")
-			vim.cmd.colorscheme("kanagawa")
 			vim.api.nvim_set_hl(0, 'Normal', { bg = nil })
 		end
 	},
@@ -19,5 +19,6 @@ return {
 				terminal = true,
 			})
 		end,
-	}
+	},
+	{ "yorik1984/newpaper.nvim", priority = 1000,     config = true, }
 }

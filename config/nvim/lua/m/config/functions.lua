@@ -1,3 +1,11 @@
+function CopyFilePath()
+	vim.fn.setreg('+', vim.fn.expand('%:p'))
+end
+
+function CopyDirPath()
+	vim.fn.setreg('+', vim.fn.getcwd())
+end
+
 function ToggleDiagnostics()
 	if vim.g.diagnostics_active then
 		vim.g.diagnostics_active = false

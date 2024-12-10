@@ -1,6 +1,11 @@
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
+
+--vim.cmd.colorscheme("newpaper")
+--vim.cmd.colorscheme("catppuccin-latte")
+--vim.cmd.colorscheme("catppuccin-mocha")
+vim.cmd.colorscheme("ayu-mirage")
 vim.opt.cursorcolumn = true
 vim.opt.cursorline = true
 vim.opt.encoding = "UTF-8"

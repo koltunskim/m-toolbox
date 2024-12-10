@@ -23,7 +23,16 @@ return { {
 				-- require("rust-tools").setup {}
 			end
 		}
-		vim.api.nvim_set_keymap("n", "<leader>cf", "<cmd>lua vim.lsp.buf.format()<cr>", { noremap = true })
+		vim.api.nvim_create_autocmd(
+			"BufWritePost",
+			{
+				pattern = "*.hcl",
+				callback = function()
+					vim.cmd("silent !terragrunt hclfmt %")
+					vim.cmd("edit")
+				end,
+			}
+		)
 		vim.api.nvim_create_autocmd("BufWritePre", {
 			buffer = buffer,
 			callback = function()
